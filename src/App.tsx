@@ -1,7 +1,9 @@
-import Login from './components/auth/Login/Login'
-import Home from './components/Home/Home'
 import './App.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import PaginaEntrega from './components/Entregas/PaginaEntrega/PaginaEntrega'
+import Login from './components/auth/Login/Login'
+import Home from './components/Home/Home'
 
 function App() {
 
@@ -17,7 +19,7 @@ function App() {
         <Route path="/pesquisa/:keyword" element={<Home />} />
 
         <Route path="/entregas" element={<Home />} />
-          <Route path="/entrega/:id" element={<Home />} />
+          <Route path="/entrega/:id" element={<PaginaEntrega />} />
         <Route path="/produtos" element={<Home />} />
           <Route path="/produto/:id" element={<Home />} />
         <Route path="/ajuda" element={<Home />} />

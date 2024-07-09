@@ -45,7 +45,7 @@ const Menu = () => {
           <a className="menuDesktop" href="/dashboard">
             <img src={home} />
           </a>
-          <a className="menuDesktop" href="/entregas">
+          <a className="menuDesktop" href="/entrega/2">
             <img src={entregas} />
           </a>
           <a className="menuDesktop" href="/produtos">
