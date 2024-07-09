@@ -8,15 +8,15 @@ import close from '../../../assets/img/titleBar/mdi_close.svg'
 const TitleBar = () => {
 
   const minimizeWindow = () => {
-    ipcRenderer.send('manualMinimize')
+    window.ipcRenderer.send('manualMinimize')
   }
 
   const maximizeWindow = () => {
-    ipcRenderer.send('manualMaximize')
+    window.ipcRenderer.send('manualMaximize')
   }
 
   const closeWindow = () => {
-    ipcRenderer.send('manualClose')
+    window.ipcRenderer.send('manualClose')
   }
 
   return (

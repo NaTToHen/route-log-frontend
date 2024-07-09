@@ -1,9 +1,9 @@
 import { app, BrowserWindow, ipcMain } from 'electron'
-import { createRequire } from 'node:module'
+//import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
-const require = createRequire(import.meta.url)
+//const require = createRequire(import.meta.url)
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // The built directory structure
@@ -29,7 +29,7 @@ let win: BrowserWindow | null
 function createWindow() {
   win = new BrowserWindow({
     icon: path.join(__dirname, '../public/logo-app.ico'),
-    titleBarStyle: 'hidden',
+    //titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.mjs'),
@@ -44,8 +44,8 @@ function createWindow() {
   if (VITE_DEV_SERVER_URL) {
     win.loadURL(VITE_DEV_SERVER_URL)
   } else {
-    // win.loadFile('dist/index.html')
-    win.loadFile(path.join(RENDERER_DIST, 'index.html'))
+    //win.loadFile('dist/index.html/dashboard.html')
+    win.loadFile(path.join(RENDERER_DIST, 'index.html/'))
   }
 }
 

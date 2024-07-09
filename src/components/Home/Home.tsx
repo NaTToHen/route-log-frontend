@@ -37,7 +37,7 @@ const Home = () => {
         <Grafico
         width={550}
         height={320}
-        tituloGrafico="Quantidade de Entregas por Rota"
+        tituloGrafico="Capital movimentada"
         />
 
         <Grafico

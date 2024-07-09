@@ -3,7 +3,7 @@ import './Login.scss';
 
 const Login = () => {
 
-   function handleLogin(e) {
+   function handleLogin(e: any) {
       e.preventDefault();
       window.location.href = "/dashboard"
    }
