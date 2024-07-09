@@ -7,17 +7,32 @@
   .containerApp {
     overflow-y: scroll;
   }
+
+  .containerGraficos {
+    margin-bottom: 50px;
+  }
+
+  .atalhos {
+    margin: 30px 0;
+  }
+
+  .atalhos a {
+    height: calc(30px + 0.5vw);
+    font-size: calc(10px + 0.3vw);
+    min-width: 100px;
+    padding: 0 10px;
+  }
   
 }
 
 .atalhos {
   width: 100%;
   z-index: 90;
-  margin: 30px 60px;
+  margin: 30px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 50px;
+  gap: calc(10px + 0.5vw);
 
   a {
     display: flex;
