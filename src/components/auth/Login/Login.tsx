@@ -1,7 +1,12 @@
-import logoApp from '../../../assets/logo.svg';
+import logoApp from '../../../assets/img/logo.svg';
 import './Login.scss';
 
 const Login = () => {
+
+   function handleLogin(e) {
+      e.preventDefault();
+      window.location.href = "/dashboard"
+   }
    return (
       <div className="container">
          <section className="left">
@@ -9,12 +14,21 @@ const Login = () => {
          </section>
 
          <section className="right">
-            <div>
-               LOGIN ADMIN
+            <div className='topoLogin'>
+               <h1>LOGIN ADMIN</h1>
+            </div>
+            <div className='formLogin'>
+               <form action="" method="post">
+                  <label className='labelForm'>Usuario</label>
+                  <input type="text" />
+                  <label className='labelForm'>Senha</label>
+                  <input type="password" />
+                  <button type="submit" onClick={handleLogin}>Efetuar login</button>
+               </form>
             </div>
          </section>
       </div>
    );
 };
 
-export default Login;
+export default Login

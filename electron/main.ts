@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
@@ -29,7 +29,9 @@ let win: BrowserWindow | null
 function createWindow() {
   win = new BrowserWindow({
     icon: path.join(__dirname, '../public/logo-app.ico'),
+    titleBarStyle: 'hidden',
     webPreferences: {
+      nodeIntegration: true,
       preload: path.join(__dirname, 'preload.mjs'),
     },
   })
@@ -46,6 +48,26 @@ function createWindow() {
     win.loadFile(path.join(RENDERER_DIST, 'index.html'))
   }
 }
+
+app.commandLine.appendSwitch('enable-overlay-scrollbar')
+
+ipcMain.on("manualMinimize", () => {
+  win?.minimize()
+})
+const maximizeToggle = () => {
+  if (win?.isMaximized()) {
+    win?.unmaximize()
+  } else {
+    win?.maximize()
+  }
+}
+ipcMain.on("manualMaximize", () => {
+  maximizeToggle()
+})
+
+ipcMain.on("manualClose", () => {
+  win?.close()
+})
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits

@@ -1,0 +1,44 @@
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: #E49700;
+
+  div {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  h1 {
+    color: #ffff;
+    font-size: calc(10px + 0.3vw);
+    padding: 0 20px;
+  }
+
+  .titlebarNav {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    gap: 10px;
+
+    img {
+      padding: 5px;
+    }
+    img:hover {
+      cursor: pointer;
+      background: #ffaa00;
+    }
+
+    img:active {
+      background: #b47801;
+    }
+  }
+  -webkit-app-region: drag;
+}
+
+:not(.titlebar) {
+  -webkit-app-region: no-drag;
+}

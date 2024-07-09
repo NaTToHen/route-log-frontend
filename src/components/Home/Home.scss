@@ -1,0 +1,49 @@
+.containerApp {
+  flex-direction: column;
+  background: #E5E5E5;
+}
+
+@media screen and (max-width: 1800px) {
+  .containerApp {
+    overflow-y: scroll;
+  }
+  
+}
+
+.atalhos {
+  width: 100%;
+  z-index: 90;
+  margin: 30px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    min-width: 150px;
+    text-decoration: none;
+    color: #ffff;
+    padding: 0 20px;
+    font-size: 20px;
+    border: 2px solid #E49700;
+    background: #FFA800;
+  }
+
+  a:hover {
+    background-color: #E49700;
+  }
+}
+
+.containerGraficos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-left: 20px;
+  width: calc(100% - 60px);
+}
