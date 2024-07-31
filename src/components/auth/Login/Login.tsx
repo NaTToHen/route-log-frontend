@@ -7,6 +7,7 @@ const Login = () => {
       e.preventDefault();
       window.location.href = "/dashboard"
    }
+   
    return (
       <div className="container">
          <section className="left">
